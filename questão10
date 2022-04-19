@@ -1,0 +1,28 @@
+#include <stdio.h>
+int i, idN;
+
+void defineCateg(int idN) {
+  if (idN >= 5 && idN < 7) {
+    printf("Categoria F");
+  } else if (idN >= 8 && idN <= 10) {
+    printf("Categoria E");
+  } else if (idN >= 11 && idN <= 13) {
+    printf("Categoria D");
+  } else if (idN >= 14 && idN <= 15) {
+    printf("Categoria C");
+  } else if (idN >= 16 && idN <= 17) {
+    printf("Categoria B");
+  } else if (idN >= 18) {
+    printf("Categoria A");
+  }
+}
+int main(void) {
+  int n, idN;
+  printf("\nDigite o número desejados de nadadores: \n");
+  scanf("%d", &n);
+  for (int i = 1; i <= n; i++) {
+    printf("\nDigite a idade %dº nadador: \n", i);
+    scanf("%d", &n);
+    defineCateg(n);
+  } 
+}
