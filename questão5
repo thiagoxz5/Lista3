@@ -1,0 +1,33 @@
+#include <stdio.h>
+void contAlunos(int N) {
+  int media;
+  printf("\nDigite a media final da nota do aluno \n");
+  scanf("%d", &media);
+
+  if (media < 39) {
+    printf("O conceito tirado é 'F'\n");
+  } else if ((media >= 40) && (media < 59)) {
+    printf("O conceito tirado é 'E'\n");
+
+  } else if ((media >= 60) && (media < 69)) {
+    printf("O conceito tirado é 'D'\n");
+
+  } else if ((media >= 70) && (media < 79)) {
+    printf("O conceito tirado é 'C'\n");
+
+  } else if ((media >= 80) && (media < 89)) {
+    printf("O conceito tirado é 'B'\n");
+
+  } else if (media >= 90) {
+    printf("O conceito tirado é 'A'\n");
+  }
+}
+
+int main(void) {
+  int media, a;
+  printf("Informe a quantidade de alunos: \n");
+  scanf("%d", &a);
+  for (int i = 1; i <= a; i++) {
+    contAlunos(a);
+  }
+}
