@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+ float formula (int N) {
+  float fat = 1, S = 0;
+  for (int i = 1; i<=N; i++) {
+  S += 1/fat;
+  fat *= i;
+  }
+  return S;
+}
+
+int main(void) {
+  int num;
+  printf("Digite um valor inteiro e positivo\n");
+  scanf("%d", &num);
+  printf("O resultado é: %f", formula (num));
+  return 0;
+}
